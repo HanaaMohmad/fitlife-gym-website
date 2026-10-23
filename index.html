@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#071326" />
+  <title>FitLife — Stronger Every Day</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{--bg:#06101f;--panel:#0b1b32;--panel2:#102544;--text:#f5f8ff;--muted:#a8b7d0;--blue:#20b7ff;--purple:#8050ff;--line:rgba(106,164,255,.22)}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(ellipse at 75% 10%,#12284a 0,transparent 34%),var(--bg);color:var(--text);font-family:Inter,system-ui,sans-serif}a{color:inherit;text-decoration:none}button,input,select{font:inherit}.container{width:min(1160px,92%);margin:auto}
+    header{position:sticky;top:0;z-index:10;background:rgba(5,15,30,.88);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}.nav{height:78px;display:flex;align-items:center;justify-content:space-between;gap:24px}.brand{display:flex;align-items:center;gap:11px;font-size:1.6rem;font-weight:800;letter-spacing:-1px}.brand-mark{width:38px;height:30px;position:relative;display:flex;align-items:center;justify-content:center;color:#d8ccff;font-size:2rem}.brand-mark:before{content:"";position:absolute;width:28px;height:7px;background:linear-gradient(90deg,var(--purple),var(--blue));border-radius:5px}.brand-mark:after{content:"";position:absolute;width:7px;height:26px;border-left:5px solid #d8ccff;border-right:5px solid #d8ccff;left:2px;box-shadow:22px 0 0 -0px #d8ccff}.nav-links{display:flex;gap:30px;color:#d1daeb;font-size:.92rem}.nav-links a:hover{color:var(--blue)}.nav-actions{display:flex;align-items:center;gap:14px}.search{border:0;background:transparent;color:white;font-size:1.3rem;cursor:pointer}.btn{border:0;display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:13px 23px;border-radius:999px;background:linear-gradient(110deg,#7543f5,#5a54ff);color:white;font-weight:700;box-shadow:0 8px 26px #7543f544;cursor:pointer;transition:transform .2s,filter .2s}.btn:hover{transform:translateY(-2px);filter:brightness(1.12)}.btn-outline{background:transparent;border:1px solid #8ea4c5;box-shadow:none}.menu-toggle{display:none;background:none;border:0;color:white;font-size:1.6rem}
+    .hero{min-height:550px;display:grid;grid-template-columns:1fr 1.03fr;align-items:center;gap:24px;padding:48px 0 34px;position:relative}.hero-copy{z-index:1}.eyebrow{display:inline-flex;align-items:center;gap:8px;padding:8px 14px;border:1px solid #326eb8;border-radius:999px;color:#75d9ff;font-size:.78rem;font-weight:800;letter-spacing:1.4px;background:#071d34}.eyebrow span{color:#c5a8ff}.hero h1{font-size:clamp(2.8rem,5.2vw,4.7rem);line-height:1.03;letter-spacing:-3px;margin:23px 0 20px;max-width:650px}.hero h1 span{color:var(--blue)}.hero p{color:#c0cbe0;line-height:1.8;max-width:510px;font-size:1rem}.hero-buttons{display:flex;gap:13px;flex-wrap:wrap;margin-top:27px}.hero-image{position:relative;height:470px;border-radius:28px;overflow:hidden;isolation:isolate}.hero-image:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#06101f 0%,transparent 45%),linear-gradient(0deg,#06101f88,transparent 45%);z-index:1}.hero-image img{width:100%;height:100%;object-fit:cover;object-position:center}.image-note{position:absolute;z-index:2;right:15px;top:28%;font-size:1.3rem;font-weight:800;font-style:italic;transform:rotate(-8deg);text-shadow:0 3px 18px #000}.image-note span{display:block;color:var(--blue);font-size:2rem}
+    .features{display:grid;grid-template-columns:repeat(4,1fr);background:linear-gradient(120deg,#09172b,#0b1d35);border:1px solid var(--line);border-radius:22px;padding:24px 14px;margin:12px 0 76px}.feature{display:flex;align-items:center;gap:13px;padding:4px 20px;border-right:1px solid var(--line)}.feature:last-child{border:0}.feature-icon{flex:0 0 54px;width:54px;height:54px;border-radius:50%;display:grid;place-items:center;color:#d9c9ff;font-size:1.4rem;background:#211b50;border:1px solid #7556df;box-shadow:inset 0 0 18px #6d43cf22}.feature strong{display:block;font-size:.9rem;margin-bottom:5px}.feature small{color:var(--muted);font-size:.75rem}
+    section{scroll-margin-top:95px}.section-head{display:flex;align-items:end;justify-content:space-between;gap:20px;margin-bottom:24px}.section-head h2{font-size:2rem;letter-spacing:-1px;margin:0 0 8px}.section-head p{margin:0;color:var(--muted)}.text-link{color:#bd9bff;font-weight:700}.classes{padding-bottom:76px}.class-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}.class-card{background:#0c1b31;border:1px solid #244a79;border-radius:14px;overflow:hidden;transition:transform .25s,border-color .25s}.class-card:hover{transform:translateY(-6px);border-color:var(--blue)}.class-card img{width:100%;height:170px;object-fit:cover;display:block}.class-info{padding:16px}.class-info h3{font-size:1rem;margin:0 0 8px}.class-info p{color:var(--muted);font-size:.83rem;margin:0 0 13px}.class-meta{display:flex;justify-content:space-between;color:#7ddcff;font-size:.76rem}
+    .about{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;padding:55px 0 85px}.about-image{height:390px;border-radius:22px;overflow:hidden;border:1px solid var(--line)}.about-image img{width:100%;height:100%;object-fit:cover}.about h2{font-size:2.4rem;line-height:1.15;margin:18px 0}.about p{color:var(--muted);line-height:1.8}.stats{display:flex;gap:30px;margin:25px 0}.stat strong{font-size:1.7rem;display:block;color:var(--blue)}.stat span{font-size:.78rem;color:var(--muted)}
+    .trainers{padding:0 0 80px}.trainer-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.trainer{border:1px solid var(--line);border-radius:16px;overflow:hidden;background:var(--panel)}.trainer img{width:100%;height:250px;object-fit:cover}.trainer div{padding:17px}.trainer h3{margin:0 0 6px}.trainer p{margin:0;color:var(--muted);font-size:.85rem}
+    .join{margin:0 auto 75px;padding:44px;border:1px solid #3b5591;border-radius:24px;background:radial-gradient(circle at 90% 20%,#39257c 0,transparent 38%),linear-gradient(120deg,#102545,#0b1830);display:flex;justify-content:space-between;align-items:center;gap:24px}.join h2{margin:0 0 10px;font-size:2rem}.join p{margin:0;color:var(--muted)}footer{border-top:1px solid var(--line);padding:30px 0;color:var(--muted);font-size:.85rem}.footer-inner{display:flex;justify-content:space-between;gap:20px;align-items:center}.socials{display:flex;gap:17px}
+    .modal-backdrop{display:none;position:fixed;inset:0;z-index:30;background:#020813cc;align-items:center;justify-content:center;padding:18px}.modal-backdrop.open{display:flex}.modal{width:min(480px,100%);background:#0b1b32;border:1px solid #3c5d9b;border-radius:20px;padding:28px;box-shadow:0 25px 80px #0008}.modal-head{display:flex;justify-content:space-between;align-items:center}.modal h2{margin:0}.close{border:0;background:none;color:white;font-size:1.6rem;cursor:pointer}.modal p{color:var(--muted);line-height:1.6}.modal form{display:grid;gap:13px}.modal input,.modal select{width:100%;background:#071326;color:white;border:1px solid #2c456b;border-radius:10px;padding:13px}.modal label{font-size:.85rem;color:#d5def0}.modal .btn{width:100%;margin-top:5px}.toast{display:none;margin-top:12px;color:#8de8c0;font-size:.9rem}.toast.show{display:block}
+    @media(max-width:900px){.nav-links{gap:16px}.hero{grid-template-columns:1fr 1fr}.hero h1{font-size:3.3rem}.features{grid-template-columns:repeat(2,1fr);gap:18px}.feature:nth-child(2){border:0}.class-grid{grid-template-columns:repeat(2,1fr)}.feature{padding:5px 14px}.about{gap:28px}}
+    @media(max-width:650px){.nav{height:68px}.brand{font-size:1.35rem}.menu-toggle{display:block}.nav-links{display:none;position:absolute;top:68px;left:0;right:0;padding:20px 5%;background:#071326;flex-direction:column;border-bottom:1px solid var(--line)}.nav-links.open{display:flex}.nav-actions .btn{display:none}.search{font-size:1.1rem}.hero{grid-template-columns:1fr;padding-top:38px;gap:8px}.hero h1{font-size:3.15rem;letter-spacing:-2px}.hero-image{height:330px;grid-row:1}.hero-image:before{background:linear-gradient(0deg,#06101f 0%,transparent 65%)}.image-note{font-size:1rem;right:8px}.features{margin-bottom:55px;padding:18px 8px}.feature{gap:10px;padding:5px 8px;border:0}.feature-icon{width:42px;height:42px;flex-basis:42px;font-size:1.1rem}.feature strong{font-size:.78rem}.feature small{font-size:.68rem}.section-head{align-items:start;flex-direction:column}.section-head h2{font-size:1.7rem}.class-grid{gap:12px}.class-card img{height:125px}.class-info{padding:12px}.class-info h3{font-size:.9rem}.class-info p{font-size:.75rem}.about{grid-template-columns:1fr;padding:15px 0 60px}.about-image{height:270px;grid-row:2}.about h2{font-size:2rem}.trainer-grid{grid-template-columns:1fr 1fr}.trainer img{height:170px}.trainer div{padding:12px}.trainer h3{font-size:.9rem}.trainer p{font-size:.75rem}.join{padding:28px;align-items:start;flex-direction:column}.join h2{font-size:1.65rem}.footer-inner{align-items:flex-start;flex-direction:column}}
+  </style>
+</head>
+<body>
+<header>
+  <div class="container nav">
+    <a class="brand" href="#home" aria-label="FitLife home"><span class="brand-mark"></span>FitLife</a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Open menu">☰</button>
+    <nav class="nav-links" id="navLinks"><a href="#home">Home</a><a href="#about">About</a><a href="#classes">Classes</a><a href="#trainers">Trainers</a><a href="#contact">Contact</a></nav>
+    <div class="nav-actions"><button class="search" id="searchBtn" aria-label="Search classes">⌕</button><button class="btn" data-join>Join Now</button></div>
+  </div>
+</header>
+<main>
+  <section class="container hero" id="home">
+    <div class="hero-copy">
+      <div class="eyebrow"><span>FITNESS</span> &amp; HEALTH</div>
+      <h1>A Healthier You<br>Starts <span>Here.</span></h1>
+      <p>Get stronger, healthier and happier with fitness programs built around you. Discover modern facilities, expert trainers and a community that keeps you moving.</p>
+      <div class="hero-buttons"><button class="btn" data-join>Join Now <span>↗</span></button><a class="btn btn-outline" href="#about">Learn More</a></div>
+    </div>
+    <div class="hero-image">
+      <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1200&q=85" alt="Modern gym with strength training equipment">
+      <div class="image-note">Stronger<br>Every Day <span>↙</span></div>
+    </div>
+  </section>
+  <div class="container features">
+    <div class="feature"><div class="feature-icon">▥</div><div><strong>Modern Equipment</strong><small>Top-tier gym facilities</small></div></div>
+    <div class="feature"><div class="feature-icon">♙</div><div><strong>Expert Trainers</strong><small>Certified professionals</small></div></div>
+    <div class="feature"><div class="feature-icon">♧</div><div><strong>Flexible Plans</strong><small>For all fitness levels</small></div></div>
+    <div class="feature"><div class="feature-icon">♧</div><div><strong>Support Community</strong><small>Together we achieve more</small></div></div>
+  </div>
+  <section class="container classes" id="classes">
+    <div class="section-head"><div><h2>Our Classes</h2><p>Choose your favorite workout</p></div><a class="text-link" href="#contact">View All Classes &nbsp; →</a></div>
+    <div class="class-grid" id="classGrid">
+      <article class="class-card"><img src="https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?auto=format&fit=crop&w=700&q=80" alt="Strength training"><div class="class-info"><h3>Strength Training</h3><p>Build muscle &amp; power</p><div class="class-meta"><span>↗ All levels</span><span>45 min</span></div></div></article>
+      <article class="class-card"><img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&w=700&q=80" alt="Yoga class"><div class="class-info"><h3>Yoga</h3><p>Flexibility &amp; balance</p><div class="class-meta"><span>✦ Beginner</span><span>50 min</span></div></div></article>
+      <article class="class-card"><img src="https://images.unsplash.com/photo-1534258936925-c58bed479fcb?auto=format&fit=crop&w=700&q=80" alt="High intensity workout"><div class="class-info"><h3>HIIT</h3><p>Burn energy, build stamina</p><div class="class-meta"><span>⚡ Intense</span><span>30 min</span></div></div></article>
+      <article class="class-card"><img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=700&q=80" alt="Pilates workout"><div class="class-info"><h3>Pilates</h3><p>Body &amp; mind connection</p><div class="class-meta"><span>✦ All levels</span><span>40 min</span></div></div></article>
+    </div>
+  </section>
+  <section class="container about" id="about">
+    <div class="about-image"><img src="https://images.unsplash.com/photo-1571902943202-507ec2618e8f?auto=format&fit=crop&w=1100&q=85" alt="Bright modern fitness studio"></div>
+    <div><div class="eyebrow">WHY FITLIFE?</div><h2>Your goals.<br>Our <span style="color:var(--blue)">mission.</span></h2><p>Fitness should fit your life. Whether you're taking your first step or chasing a new personal best, we'll help you build a routine that feels good and gets results.</p><p>Train in a welcoming space, get guidance from coaches who care, and celebrate every bit of progress along the way.</p><div class="stats"><div class="stat"><strong>1.2k+</strong><span>Happy members</span></div><div class="stat"><strong>15+</strong><span>Expert coaches</span></div><div class="stat"><strong>20+</strong><span>Weekly classes</span></div></div><button class="btn" data-join>Find Your Plan ↗</button></div>
+  </section>
+  <section class="container trainers" id="trainers">
+    <div class="section-head"><div><h2>Meet Your Trainers</h2><p>Good coaching makes all the difference.</p></div></div>
+    <div class="trainer-grid">
+      <article class="trainer"><img src="https://images.unsplash.com/photo-1567013127542-490d757e51fc?auto=format&fit=crop&w=700&q=80" alt="Personal trainer"><div><h3>Alex Morgan</h3><p>Strength &amp; Conditioning</p></div></article>
+      <article class="trainer"><img src="https://images.unsplash.com/photo-1548690312-e3b507d8c110?auto=format&fit=crop&w=700&q=80" alt="Fitness coach"><div><h3>Sarah James</h3><p>Yoga &amp; Mobility</p></div></article>
+      <article class="trainer"><img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=700&q=80" alt="Training floor"><div><h3>Daniel Reed</h3><p>HIIT &amp; Performance</p></div></article>
+    </div>
+  </section>
+  <section class="container join" id="contact"><div><h2>Ready to feel stronger?</h2><p>Your next chapter starts with one small step. Let's make it count.</p></div><button class="btn" data-join>Start Your Journey ↗</button></section>
+</main>
+<footer><div class="container footer-inner"><a class="brand" href="#home"><span class="brand-mark"></span>FitLife</a><span>© <span id="year"></span> FitLife Gym. Built for your best self.</span><div class="socials"><a href="#contact">Instagram</a><a href="#contact">Facebook</a><a href="#contact">Email</a></div></div></footer>
+<div class="modal-backdrop" id="joinModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+  <div class="modal"><div class="modal-head"><h2 id="modalTitle">Join FitLife</h2><button class="close" id="closeModal" aria-label="Close">×</button></div><p>Tell us a little about yourself and our team will help you choose the right plan.</p>
+    <form id="joinForm"><label>Full name<input name="name" required placeholder="Your name"></label><label>Phone or email<input name="contact" required placeholder="How can we reach you?"></label><label>Interested in<select name="plan"><option>Gym membership</option><option>Personal training</option><option>Group classes</option><option>Yoga & Pilates</option></select></label><button class="btn" type="submit">Send Request ↗</button></form><div class="toast" id="toast">Thanks! Your request is ready. Connect this form to your email or backend to receive submissions.</div>
+  </div>
+</div>
+<script>
+  const menuToggle=document.getElementById('menuToggle'),navLinks=document.getElementById('navLinks');
+  menuToggle.addEventListener('click',()=>navLinks.classList.toggle('open'));
+  navLinks.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>navLinks.classList.remove('open')));
+  document.getElementById('year').textContent=new Date().getFullYear();
+  const modal=document.getElementById('joinModal');
+  document.querySelectorAll('[data-join]').forEach(btn=>btn.addEventListener('click',()=>{modal.classList.add('open');document.body.style.overflow='hidden'}));
+  function closeModal(){modal.classList.remove('open');document.body.style.overflow=''}
+  document.getElementById('closeModal').addEventListener('click',closeModal);
+  modal.addEventListener('click',e=>{if(e.target===modal)closeModal()});
+  document.addEventListener('keydown',e=>{if(e.key==='Escape')closeModal()});
+  document.getElementById('joinForm').addEventListener('submit',e=>{e.preventDefault();document.getElementById('toast').classList.add('show');e.target.reset()});
+  document.getElementById('searchBtn').addEventListener('click',()=>{document.getElementById('classes').scrollIntoView({behavior:'smooth'});document.getElementById('classGrid').style.outline='2px solid #20b7ff';setTimeout(()=>document.getElementById('classGrid').style.outline='',1300)});
+</script>
+</body>
+</html>
